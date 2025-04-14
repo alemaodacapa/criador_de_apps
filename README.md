@@ -15,7 +15,7 @@
 
 ## 🖼️ Prévia
 
-![App Maker Screenshot](img/Appmaker.png)
+![App Maker Screenshot](https://github.com/alemaodacapa/criador_de_apps/img/Appmaker.png)
 
 ## 📂 Estrutura do Projeto
 
