@@ -13,10 +13,6 @@
 - ✅ Janela embutida com pré-visualização do site do app
 - ✅ Chat integrado estilo suporte ao cliente
 
-## 🖼️ Prévia
-
-![App Maker Screenshot](https://github.com/alemaodacapa/criador_de_apps/img/Appmaker.png)
-
 ## 📂 Estrutura do Projeto
 
 ```
