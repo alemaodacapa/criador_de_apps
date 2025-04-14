@@ -15,7 +15,7 @@
 
 ## 🖼️ Prévia
 
-![App Maker Screenshot](/img/Appmaker.jpg)
+![App Maker Screenshot](img/Appmaker.jpg)
 
 ## 📂 Estrutura do Projeto
 
