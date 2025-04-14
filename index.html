@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Apps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Criador de Apps</h1>
+        <p class="subtitle">Crie e publique a pré-visualização do seu app personalizado</p>
+        
+        <div class="app-maker">
+            <div class="form-section">
+                <h2>Detalhes do App</h2>
+                <div class="form-group">
+                    <label for="app-name">Nome do App</label>
+                    <input type="text" id="app-name" placeholder="Digite o nome do app">
+                </div>
+                
+                <div class="form-group">
+                    <label for="app-url">URL do App</label>
+                    <input type="url" id="app-url" placeholder="https://exemplo.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="app-icon">Ícone do App</label>
+                    <div class="upload-container">
+                        <input type="url" id="app-icon" placeholder="Digite a URL do ícone">
+                        <label class="upload-label">
+                            <span>Fazer Upload</span>
+                            <input type="file" id="app-icon-upload" accept="image/*" class="file-input">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="app-image">Captura de Tela do App</label>
+                    <div class="upload-container">
+                        <input type="url" id="app-image" placeholder="Digite a URL da captura de tela">
+                        <label class="upload-label">
+                            <span>Fazer Upload</span>
+                            <input type="file" id="app-image-upload" accept="image/*" class="file-input">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="app-description">Descrição do App</label>
+                    <textarea id="app-description" placeholder="Digite a descrição do app" rows="4"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button id="generate-app">Pré-visualizar App</button>
+                    <button id="publish-app" class="publish-btn">Publicar App</button>
+                </div>
+            </div>
+            
+            <div class="preview-section">
+                <h2>Pré-visualização do App</h2>
+                <div class="phone-frame">
+                    <div class="notch"></div>
+                    <div class="app-preview">
+                        <div class="app-header">
+                            <div class="app-icon-container">
+                                <img id="preview-icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='15' fill='%23cccccc'/%3E%3Ctext x='30' y='35' font-family='Arial' font-size='20' text-anchor='middle' fill='%23ffffff'%3EApp%3C/text%3E%3C/svg%3E" alt="Ícone do App">
+                            </div>
+                            <div class="app-info">
+                                <h3 id="preview-name">Nome do App</h3>
+                                <div id="preview-url" class="app-url">exemplo.com</div>
+                            </div>
+                        </div>
+                        <div class="app-image-container">
+                            <img id="preview-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f0f0f0'/%3E%3Ctext x='150' y='100' font-family='Arial' font-size='20' text-anchor='middle' fill='%23999999'%3ECaptura de Tela do App%3C/text%3E%3C/svg%3E" alt="Captura de Tela do App">
+                        </div>
+                        <div class="app-description">
+                            <p id="preview-description">A descrição do seu app aparecerá aqui. Escreva sobre o que seu app faz e porque as pessoas devem baixá-lo.</p>
+                        </div>
+                        <div class="app-action">
+                            <button class="get-app-btn">OBTER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="published-apps-section">
+            <h2>Apps Publicados</h2>
+            <div id="published-apps-container" class="published-apps-container">
+                <!-- Os apps publicados serão exibidos aqui -->
+                <div class="loading-message">Carregando apps publicados...</div>
+            </div>
+        </div>
+        
+        <div class="website-embed-overlay" id="website-embed-overlay">
+            <div class="website-embed-container">
+                <div class="website-embed-header">
+                    <h3 id="embed-title">Website do App</h3>
+                    <button id="close-embed" class="close-button">×</button>
+                </div>
+                <iframe id="website-embed-frame" src="about:blank" frameborder="0"></iframe>
+            </div>
+        </div>
+        
+        <div class="chat-container" id="chat-container">
+            <div class="chat-header">
+                <h3>Chat</h3>
+                <button id="close-chat" class="close-button">×</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- As mensagens do chat aparecerão aqui -->
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Digite uma mensagem...">
+                <button id="send-message">Enviar</button>
+            </div>
+        </div>
+        
+        <button id="open-chat-btn" class="open-chat-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>
